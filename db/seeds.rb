@@ -16,23 +16,40 @@ require 'faker'
 
 puts 'Cleaning database...'
 Restaurant.destroy_all
-# Review.destroy_all
+Review.destroy_all
 
 puts 'Creating restaurants and reviews...'
 
-20.times do
+15.times do
   Restaurant.create!(
     name: [
       Faker::Food.spice,
       Faker::Food.ingredient,
       Faker::Lovecraft.deity,
       Faker::Lovecraft.location
-      ].sample,
+    ].sample,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.phone_number,
     category: %w(italian japanese french belgian chinese russian mexican ethiopian thai indonesian vietnamese).sample
     )
-end
+  end
+
+# rand(0..10).times do
+#   Review.create!(
+#     content: Faker::Lorem.paragraph(2),
+#     rating: rand(0..5),
+#     restaurant:
+#   )
+
+  45.times do
+    Review.create!(
+      content: Faker::Lorem.paragraph(2),
+      rating: rand(0..5),
+      restaurant_id: rand(1..15)
+      )
+  end
+
+
 
 puts 'Finished!'
 
