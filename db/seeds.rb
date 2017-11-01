@@ -29,7 +29,7 @@ puts 'Creating restaurants and reviews...'
       Faker::Lovecraft.location
       ].sample,
     address: Faker::Address.street_address,
-    phone: Faker::PhoneNumber.cell_phone,
+    phone: Faker::PhoneNumber.phone_number,
     category: %w(italian japanese french belgian chinese russian mexican ethiopian thai indonesian vietnamese).sample
     )
 end
