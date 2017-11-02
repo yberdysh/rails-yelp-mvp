@@ -1,1 +1,59 @@
 // Specific CSS for your home-page
+body {
+  background-image: url("https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=1868&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: 180vh;
+  image-repeat: none;
+  background-attachment: fixed;
+  text-align: center;
+  color: #5A2130;
+}
+
+.container {
+  background-color: rgba(204, 190, 190, 0.88);
+  width: 600px;
+  margin: 15px auto;
+  border-radius: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.review {
+  margin: 20px;
+}
+
+a {
+  text-decoration: underline;
+  color: #5A2130;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  color: #6B9261;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #C25541;
+}
+
+.btn {
+  text-decoration: none !important;
+  margin: 10px;
+}
+
+.info {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+// font-family: 'Lobster', cursive;
+// font-family: 'Josefin Sans', sans-serif;
+// font-family: 'Open Sans', sans-serif;

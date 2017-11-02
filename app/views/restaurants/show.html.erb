@@ -1,19 +1,20 @@
 <h1> <%=@restaurant.name %></h1>
-<p>Average rating: <%= @restaurant.average_rating %></p>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.phone_number %></p>
-<h2> Reviews: </h2>
+<div class="info">
+  <p>Average rating: <%= @restaurant.average_rating %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <h2> Reviews: </h2>
 
-<ul>
-<% @restaurant.reviews.each do |review| %>
-  <li><%= review.content %></li>
-  <p></p>
-<% end %>
-</ul>
+  <ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li class="review"><%= review.content %></li>
+  <% end %>
+  </ul>
+</div>
 
-<p> <%= link_to "Add Review", new_restaurant_review_path(@restaurant) %></p>
+<p> <%= link_to "Add Review", new_restaurant_review_path(@restaurant), :class => "btn btn-warning" %></p>
 
-<p> <%= link_to "Return to all restaurants", restaurants_path%></p>
+<p> <%= link_to "Return to all restaurants", restaurants_path, :class => "btn btn-warning" %></p>
 
 
 <!-- add new review link -->
